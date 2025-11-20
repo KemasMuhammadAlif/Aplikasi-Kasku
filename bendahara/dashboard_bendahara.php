@@ -12,42 +12,60 @@
 </head>
 
 <body>
-    <!-- Sidebar -->
     <?php include 'sidebar_bendahara.php'; ?>
-
     <!-- Main Content -->
     <div class="main-content">
-        <div class="row g-3">
-            <div class="col-md-4">
-                <div class="card-info">
-                    <h5>Saldo Kas Terkini</h5>
-                    <h4>Rp 5.500.000</h4>
-                    <i class="bi bi-wallet2 text-info fs-3"></i>
+        <div class="container-fluid">
+            <div class="row g-3 mb-3">
+                <div class="col-md-4">
+                    <div class="card card-info h-100">
+                        <div class="card-body text-center">
+                            <h6 class="card-title text-muted">Saldo Kas Terkini</h6>
+                            <h4 class="fw-bold">Rp 5.500.000</h4>
+                            <i class="bi bi-wallet2 text-info fs-2"></i>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-info">
-                    <h5>Total Pengeluaran Bulan Ini</h5>
-                    <h4>Rp 540.000</h4>
-                    <p class="small text-muted mb-1">Untuk perbaikan jalan</p>
-                    <i class="bi bi-receipt text-primary fs-3"></i>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-info">
-                    <h5>Total Pemasukan Bulan Ini</h5>
-                    <h4>Rp 1.500.000</h4>
-                    <i class="bi bi-graph-up text-success fs-3"></i>
-                </div>
-            </div>
-        </div>
 
-        <div class="row chart-container">
-            <div class="col-md-7">
-                <canvas id="barChart"></canvas>
+                <div class="col-md-4">
+                    <div class="card card-info h-100">
+                        <div class="card-body text-center">
+                            <h6 class="card-title text-muted">Total Pengeluaran Bulan Ini</h6>
+                            <h4 class="fw-bold">Rp 540.000</h4>
+                            <p class="small text-muted mb-1">Untuk perbaikan jalan</p>
+                            <i class="bi bi-receipt text-primary fs-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card card-info h-100">
+                        <div class="card-body text-center">
+                            <h6 class="card-title text-muted">Total Pemasukan Bulan Ini</h6>
+                            <h4 class="fw-bold">Rp 1.500.000</h4>
+                            <i class="bi bi-graph-up text-success fs-2"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-5">
-                <canvas id="pieChart"></canvas>
+
+            <div class="row g-3">
+                <div class="col-lg-7">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="mb-3">Grafik Pendapatan</h6>
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="mb-3">Persentase Pembayaran</h6>
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

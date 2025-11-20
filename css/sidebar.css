@@ -6,43 +6,45 @@
     top: 0;
     left: 0;
     width: 220px;
-    padding-top: 30px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 .sidebar img {
-    width: 80px;
-    height: 80px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .sidebar h4 {
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
 }
 
-.sidebar a {
+.sidebar .nav-link {
     color: white;
     text-decoration: none;
-    display: block;
+    display: flex;
+    align-items: center;
     width: 100%;
-    padding: 12px 20px;
+    padding: 10px 14px;
     border-radius: 8px;
-    margin: 5px 0;
-    transition: 0.3s;
+    margin: 4px 0;
+    transition: 0.15s ease-in-out;
 }
 
-.sidebar a:hover,
-.sidebar a.active {
-    background-color: rgba(255, 255, 255, 0.2);
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
-.sidebar a i {
-    margin-right: 10px;
+.sidebar .nav-link i {
+    margin-right: 8px;
 }
 
 .header {
@@ -50,104 +52,71 @@
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    padding: 15px 25px;
+    padding: 10px 14px;
     border-radius: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: calc(100% - 28px);
+    align-self: flex-end; /* push header to the right edge of the sidebar */
 }
 
-.page-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.center-title {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 0 6px;
+}
+
+.header .page-title {
     margin: 0;
 }
 
-.logout-btn {
-    margin-top: auto;
-    background-color: #f8f9fa;
-    color: #d9534f !important;
-    font-weight: 600;
-}
-
-.logout-btn:hover {
-    background-color: #d9534f !important;
-    color: white !important;
-}
-
-.sidebar {
-    height: 100vh;
-    background: linear-gradient(180deg, #00aaff, #6f42c1);
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 220px;
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sidebar img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.sidebar h4 {
+.page-title {
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    padding: 12px 20px;
-    border-radius: 8px;
-    margin: 5px 0;
-    transition: 0.3s;
-}
-
-.sidebar a:hover,
-.sidebar a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.sidebar a i {
-    margin-right: 10px;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 15px 25px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.page-title {
-    font-size: 1.5rem;
-    font-weight: bold;
     color: #333;
     margin: 0;
 }
 
 .logout-btn {
-    margin-top: auto;
-    background-color: #f8f9fa;
-    color: #d9534f !important;
+    margin-top: 8px;
+    background-color: rgba(255,255,255,0.12);
+    color: #fff !important;
     font-weight: 600;
+    width: 100%;
 }
 
 .logout-btn:hover {
-    background-color: #d9534f !important;
+    background-color: rgba(255,255,255,0.2) !important;
     color: white !important;
+}
+
+/* Responsive: collapse sidebar on small screens */
+@media (max-width: 767px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 12px;
+        gap: 12px;
+    }
+
+    .header {
+        display: none; /* header not needed when sidebar becomes top bar */
+    }
+
+    .sidebar img { width: 40px; height: 40px; }
+    .sidebar h4 { display: none; }
+
+    /* make sure main content is not offset on small screens */
+    .main-content { margin-left: 0 !important; }
 }

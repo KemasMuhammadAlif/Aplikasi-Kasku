@@ -6,30 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - KASKU</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <div class="login-card">
-        <form onsubmit="login(event)">
-            <img src="img/kas.jpg" alt="Logo KASKU">
-            <h4 class="fw-bold text-dark">Selamat Datang di KASKU</h4>
-            <p class="text-muted mb-4">Silakan masuk untuk melanjutkan</p>
+    <div class="vh-100 d-flex align-items-center justify-content-center">
+        <div class="card login-card shadow-sm border-0">
+            <div class="card-body p-4 p-md-5">
+                <div class="text-center mb-3">
+                    <img src="img/kas.jpg" alt="Logo KASKU" class="rounded mb-2 logo-img">
+                    <h4 class="fw-bold mb-0">Selamat Datang di KASKU</h4>
+                    <p class="text-muted small mb-3">Silakan masuk untuk melanjutkan</p>
+                </div>
 
-            <div id="alert-container"></div>
+                <div id="alert-container"></div>
 
-            <div class="mb-3 position-relative">
-                <i class="bi bi-person form-icon"></i>
-                <input type="text" id="username" class="form-control" placeholder="Username" required>
+                <form id="loginForm" onsubmit="login(event)">
+                    <div class="mb-3">
+                        <label for="username" class="form-label visually-hidden">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-white"><i class="bi bi-person"></i></span>
+                            <input type="text" id="username" class="form-control" placeholder="Username" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label visually-hidden">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-white"><i class="bi bi-lock"></i></span>
+                            <input type="password" id="password" class="form-control" placeholder="Password" required>
+                        </div>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-login">MASUK</button>
+                    </div>
+                </form>
             </div>
-
-            <div class="mb-3 position-relative">
-                <i class="bi bi-lock form-icon"></i>
-                <input type="password" id="password" class="form-control" placeholder="Password" required>
-            </div>
-
-            <button type="submit" class="btn-login">MASUK</button>
-        </form>
+        </div>
     </div>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>

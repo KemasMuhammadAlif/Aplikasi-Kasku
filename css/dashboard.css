@@ -12,20 +12,29 @@ body {
 .card-info {
     background: #fff;
     border-radius: 10px;
-    padding: 20px;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.card-info h5 {
-    font-size: 0.95rem;
+.card-info .card-body {
+    padding: 1.15rem 1rem;
+}
+
+.card-info .card-title {
+    font-size: 0.85rem;
     color: #6c757d;
+    margin-bottom: 0.25rem;
 }
 
 .card-info h4 {
     color: #00aaff;
-    margin: 10px 0;
+    margin: 6px 0 8px 0;
     font-weight: 700;
+}
+
+.card-info i {
+    display: block;
+    margin-top: 8px;
 }
 
 .chart-container {

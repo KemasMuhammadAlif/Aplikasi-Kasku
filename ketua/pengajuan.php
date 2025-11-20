@@ -13,9 +13,11 @@
 
 <body>
     <?php include 'sidebar_ketua.php' ?>
-    <!-- Table -->
-    <div class="container mt-5">
-        <div class="table-container">
+
+    <div class="main-content">
+        <!-- Table -->
+        <div class="container mt-4">
+            <div class="table-container">
             <h4 class="mb-3">Pengajuan</h4>
             <table class="table align-middle text-center">
                 <thead>
@@ -36,6 +38,7 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
     </div>
 

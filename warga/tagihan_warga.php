@@ -14,8 +14,9 @@
 <body>
     <?php include 'sidebar_warga.php'; ?>
 
-    <div class="container mt-5">
-        <div class="table-container">
+    <div class="main-content">
+        <div class="container mt-4">
+            <div class="table-container">
             <h4 class="mb-3">Tagihan</h4>
             <table class="table align-middle text-center">
                 <thead>
@@ -31,25 +32,26 @@
                         <td>01-01-2025</td>
                         <td>Keamanan</td>
                         <td>Rp 20.000</td>
-                        <td><button class="status-btn belum" data-bs-toggle="modal"
+                        <td><button class="ststatus-btn btn btn-danger" data-bs-toggle="modal"
                                 data-bs-target="#modalPembayaran">Belum Bayar</button></td>
                     </tr>
                     <tr>
                         <td>01-02-2025</td>
                         <td>Kebersihan</td>
                         <td>Rp 7.000</td>
-                        <td><button class="status-btn sudah" data-bs-toggle="modal"
+                        <td><button class="status-btn btn btn-success" data-bs-toggle="modal"
                                 data-bs-target="#modalDetailPembayaran">Sudah Bayar</button></td>
                     </tr>
                     <tr>
                         <td>01-08-2025</td>
                         <td>17 Agustus</td>
                         <td>Rp 10.000</td>
-                        <td><button class="status-btn proses" data-bs-toggle="modal"
+                        <td><button class="status-btn btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#modalDetailPembayaran">Proses</button></td>
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
     </div>
 

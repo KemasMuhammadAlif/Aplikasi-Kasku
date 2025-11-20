@@ -15,8 +15,9 @@
 <body>
     <?php include 'sidebar_ketua.php' ?>
 
-    <div class="container mt-5">
-        <div class="table-container">
+    <div class="main-content">
+        <div class="container mt-4">
+            <div class="table-container">
             <h4 class="mb-3">Data Warga</h4>
             <input type="text" id="searchInput" class="form-control mb-3" placeholder="🔍 Cari Warga...">
 
@@ -32,6 +33,7 @@
                     <!-- Data diisi lewat JavaScript -->
                 </tbody>
             </table>
+            </div>
         </div>
     </div>
 

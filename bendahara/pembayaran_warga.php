@@ -20,13 +20,13 @@
     <div class="main-content">
         <div class="content-wrapper">
             <div class="btn-group">
-                <button class="btn btn-action btn-add" id="btnTambahTagihan">
+                <button class="btn btn-primary btn-sm btn-add" id="btnTambahTagihan">
                     <i class="bi bi-plus-circle"></i> Tambah Tagihan Baru
                 </button>
-                <button class="btn btn-action btn-search" id="btnCariWarga">
+                <button class="btn btn-outline-secondary btn-sm btn-search" id="btnCariWarga">
                     <i class="bi bi-search"></i> Cari Warga
                 </button>
-                <button class="btn btn-action btn-import" id="btnImportData">
+                <button class="btn btn-outline-secondary btn-sm btn-import" id="btnImportData">
                     <i class="bi bi-download"></i> Import Data Pembayaran
                 </button>
             </div>
@@ -36,8 +36,9 @@
                 <input type="text" class="form-control" placeholder="Cari nama warga..." id="searchInput">
             </div>
 
-            <div class="table-container">
-                <table>
+            <div class="table-container mt-3 p-3">
+                <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -55,7 +56,7 @@
                             <td>01-08-2025</td>
                             <td>Iuran 17 agustus</td>
                             <td>RP 10.000</td>
-                            <td><span class="status-badge status-sudah-bayar">Sudah Bayar</span></td>
+                            <td><span class="badge bg-success status-badge status-sudah-bayar">Sudah Bayar</span></td>
                         </tr>
                         <tr>
                             <td>2</td>
@@ -75,6 +76,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     </div>

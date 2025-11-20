@@ -8,7 +8,7 @@
  }
 
  .main-content {
-     margin-left: 250px;
+     margin-left: 220px; /* match sidebar width */
      padding: 20px;
      background-color: #f8f9fa;
      min-height: 100vh;
@@ -20,18 +20,17 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     padding: 15px 30px;
+     padding: 12px 24px;
      background: white !important;
      border-bottom: 1px solid #dee2e6;
      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
      position: fixed;
      top: 0;
-     left: 250px;
+     left: 220px;
      right: 0;
      z-index: 1000;
-     width: calc(100vw - 250px);
+     width: calc(100vw - 220px);
      margin: 0;
-     padding-left: 30px !important;
  }
 
  .page-title {

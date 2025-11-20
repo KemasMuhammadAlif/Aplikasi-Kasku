@@ -16,8 +16,9 @@
     <?php include 'sidebar_bendahara.php'; ?>
 
     <!-- Main -->
-    <div class="container mt-5">
-        <div class="table-container">
+    <div class="main-content">
+        <div class="container mt-4">
+            <div class="table-container">
             <h4 class="mb-3">Tagihan</h4>
             <table class="table align-middle text-center">
                 <thead>
@@ -52,6 +53,7 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
     </div>
 
